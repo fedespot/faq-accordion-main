@@ -1,0 +1,128 @@
+/* # Front-end Style Guide
+
+## Layout
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+#### Text
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+#### Gradient
+Background gradient:
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+
+### Neutral
+#### Text
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+- Light grayish blue: hsl(240, 5%, 91%)
+
+### Body Copy
+- Font size: 12px
+
+### Font
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700 */
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /*Text primary: */
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    /* Background gradient: */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    /*Neutral Text: */
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    /*Dividers: */
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+    --White: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 12px;
+    font-family: Kumbh Sans;
+    background: linear-gradient(180deg, var(--Soft-violet), var(--Soft-blue));
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+
+.container{
+    background-color: var(--White);
+    border-radius: 2em;
+    box-shadow: 0 10px 40px var(--Very-dark-desaturated-blue);
+    width: 335px;
+    padding: 2.5em;
+    
+}
+
+.container-section1{
+    display: flex;
+    justify-content: center;
+}
+.container-section1__img{
+    width: 240px;
+    margin-top: -140px;
+}
+
+h1{
+    text-align: center;
+    margin: 1em 0;
+    font-size: 2rem;
+}
+
+.question__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.question__title::before{
+    /* content: url(images/icon-arrow-down.svg); */
+    position: absolute;
+    right: -5px;     
+}
+
+.activa{
+    font-weight: 700;
+}
+
+.question__paragraph{
+    /* position: relative; */
+    overflow: hidden;
+    display: none; 
+    transition: 300ms;
+    margin-top: 1em;
+}
+
+.arrow_up{
+    transform: rotate(180deg);
+}
+
+.lines{
+    margin: 1.5em 0;
+
+}
