@@ -57,41 +57,55 @@ body {
     font-size: 12px;
     font-family: Kumbh Sans;
     background: linear-gradient(180deg, var(--Soft-violet), var(--Soft-blue));
-}
-
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
-    
+    display: grid;
+    place-items: center;
 }
 
-.container{
+main {
+    margin-top: 150px;
+}
+
+.container {
+
     background-color: var(--White);
     border-radius: 2em;
     box-shadow: 0 10px 40px var(--Very-dark-desaturated-blue);
-    width: 335px;
+    min-width: 335px;
     padding: 2.5em;
-    
+
 }
 
-.container-section1{
+/* .container-section1{
     display: flex;
     justify-content: center;
-}
-.container-section1__img{
+} */
+.container-section1__img {
+    display: block;
     width: 240px;
-    margin-top: -140px;
+    margin: -140px auto 0;
 }
 
-h1{
+.container-section1__img--shadow {
+    width: 240px;
+    margin: -75px auto 0;
+    content: url(./images/bg-pattern-mobile.svg);
+}
+
+
+
+h1 {
     text-align: center;
     margin: 1em 0;
     font-size: 2rem;
+
 }
 
-.question__title{
+.question {
+    width: 280px;
+}
+
+.question__title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,29 +114,71 @@ h1{
     font-weight: 400;
 }
 
-.question__title::before{
-    /* content: url(images/icon-arrow-down.svg); */
-    position: absolute;
-    right: -5px;     
+.question__title:hover {
+    cursor: pointer;
+    color: orange;
 }
 
-.activa{
+.question__title::before {
+    /* content: url(images/icon-arrow-down.svg); */
+    position: absolute;
+    right: -5px;
+}
+
+.activa {
     font-weight: 700;
 }
 
-.question__paragraph{
+.question__paragraph {
     /* position: relative; */
     overflow: hidden;
-    display: none; 
+    display: none;
     transition: 300ms;
     margin-top: 1em;
 }
 
-.arrow_up{
+.arrow_up {
     transform: rotate(180deg);
+    transition: 300ms;
 }
 
-.lines{
+.lines {
     margin: 1.5em 0;
 
+}
+
+
+@media (min-width: 1000px) {
+    .container {
+        display: flex;
+        /* padding: 5em; */
+        width: 924px;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-position-x: -589px;
+        background-position-y: -291px;
+        background-repeat: no-repeat;
+        
+    }
+
+    .container-section1,
+    .container-section2 {
+        
+        width: 100%;
+    }
+    .container-section1__img{
+        width: 454px;
+        margin: 57px 0 0 -108px;
+    }
+    .container-section1__img--shadow{
+        display: none;
+    }
+    .container-section2{
+        padding: 2em 4em 3.5em 3em;
+    }
+    h1{
+        text-align: left;
+    }
+    .lines{
+        width: 80%;
+    }
 }
